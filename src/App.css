@@ -28,6 +28,44 @@
   color: #61dafb;
 }
 
+.Success-message {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.Error-message {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px
+}
+
+.Close-Button {
+  float: right;
+  background-color: gray;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.CustomerTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.CustomerTable th, .CustomerTable td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.CustomerTable thead {
+  background-color: #f2f2f2;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

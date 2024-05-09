@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import MessageContext from '../context/MessageContext';
+import '../App.css';
 
 const Home: React.FC = () => {
     const {successMessage, setSuccessMessage, errorMessage, setErrorMessage} = useContext(MessageContext);
@@ -7,17 +8,11 @@ const Home: React.FC = () => {
         <div>
             {/* Success Message */}
             {successMessage && (
-                <div style={{backgroundColor: 'green', color: 'white', padding: '10px', marginBottom: '20px'}}>
+                <div className= 'Success-message'>
                     <span>{successMessage}</span>
                     <button
                         onClick={() => setSuccessMessage('')}
-                        style={{
-                            float: 'right',
-                            backgroundColor: 'red',
-                            color: 'white',
-                            border: 'none',
-                            cursor: 'pointer'
-                        }}>
+                       className='Close-Button'>
                         Close
                     </button>
                 </div>
@@ -25,17 +20,11 @@ const Home: React.FC = () => {
 
             {/* Error Message */}
             {errorMessage && (
-                <div style={{backgroundColor: 'red', color: 'white', padding: '10px', marginBottom: '20px'}}>
+                <div className="Error-Message">
                     <span>{errorMessage}</span>
                     <button
                         onClick={() => setErrorMessage('')}
-                        style={{
-                            float: 'right',
-                            backgroundColor: 'black',
-                            color: 'white',
-                            border: 'none',
-                            cursor: 'pointer'
-                        }}>
+                        className='Close-Button'>
                         Close
                     </button>
                 </div>
